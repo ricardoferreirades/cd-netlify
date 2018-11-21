@@ -10,5 +10,24 @@
 <body>
     <h1>Hello, Netlify!</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis tempora maxime illo reprehenderit? Sit distinctio itaque, earum, quas doloremque ducimus perspiciatis modi maiores asperiores ex libero ut tempora temporibus nihil!</p>
+    <img src="" alt="">
+
+
+    <script>
+        var w = window;
+
+        w.onload = function() {
+            var image = document.querySelector('img');
+            var xhr = new XMLHttpRequest();
+
+            xhr.open("GET", 'https://http.cat/200', true);
+
+            xhr.onload = function(res) {
+                console.log(res);
+            }
+
+            xhr.send();
+        }
+    </script>
 </body>
 </html>
